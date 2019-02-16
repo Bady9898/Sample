@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Student Registration</title>
+	</head>
+	<body> 
+<!-- student name
+address
+phone no.
+college 
+email
+course -->
+
+
+		<h1>Enter student details:</h1>
+		<form>
+			<table>
+			<tbody>
+			<tr>
+				<td><label for="Studentname">Name:</label></td>
+				<td><input type= "text" id="Studentname" placeholder="Write your Name"></td>
+			</tr><br>
+			<tr>
+				<td><label for="Studentemail">Student Email:</label></td>
+				<td><input type="text" id="Studentemail"></td>
+			</tr><br>
+			<tr>
+				<td><label for="Studentaddress">Address:</label></td>
+				<td><textarea></textarea></td>
+			</tr><br>
+			<tr>
+				<td><label for="Studentpno.">Phone NO.</label></td>
+				<td><input type="number"></td>
+			</tr><br>	
+			<tr>
+				<td><label for="Studentcourse">Course:</label></td>
+				<td><input type="radio" name="course">Full stack</td>
+				<td><input type="radio" name="course">Cross platform</td>
+			</tr>
+			<tr>
+				<td><label for="College">College:</label></td>
+				<td><select>
+					<option>ABC</option>
+					<option>BCD</option>
+					<option>EFG</option>
+				</td></select>
+			</tr>
+			<tr>
+				<td colspan="2"><button type="submit" name="Submitbutton" onclick="myFunction(this)">Confirm Registration</button></td>
+			</tr>
+			</tbody>
+		</table>
+		</form>
+		<div style="display: none;" id="showstudentDiv">
+			<h2>
+				Entered details are as follows: 
+			</h2>
+
+			<span>Entered Student name: </span>
+			<span id="enteredName"></span>
+			<br>
+
+			<span>Entered Student phone no.: </span>
+			<span id="enteredpno."></span>
+			<br>
+
+			<span>Entered </span>
+
+
+	</body>
+	<script type="text/javascript">
+		
+		function myFunction()
+		{
+			// var Studentname = document.getElementsById('Studentname').value;
+			// var Studentpno = document.getElementById('Studentpno').value;	
+/*			alert(document.getElementById('Studentname').value);
+*/
+			var Studentname = document.getElementById('Studentname').value;
+			var Studentemail = document.getElementById('Studentemail').value;
+			var Studentpno = document.getElementById('Studentpno').value;
+			var Studentcollege = document.getElementById('Studentcollege').value;
+			var Studentaddress = document.getElementById('Studentaddress').value; 
+			var Studentcourse = document.getElementsByName('Studentcourse')[0].value;	
+
+			document.getElementById('enteredName').innerText = Studentname;
+			document.getElementById('enteredpno').innerText = Studentpno;
+			document.getElementById('enteredemail').innerText = Studentemail;
+			document.getElementById('enteredaddress').innerText = Studentaddress; 
+			document.getElementById('enteredcollege').innerText = Studentcollege;
+			document.getElementById('enteredcourse').innerText = Studentcourse;
+
+			document.getElementById('showstudentDiv').style.display ='inline';
+
+		}
+	</script>
+</html>
+
